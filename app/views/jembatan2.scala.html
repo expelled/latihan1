@@ -1,0 +1,15 @@
+@(nama: String, lokasi: String, kota:String)
+
+@main("Here is the result:") {
+    
+    <ul>
+        @for(i <- 1 to 10) {
+            <li>Hello @nama! lokasi di @lokasi kota  @kota</li>
+        }
+    </ul>
+    
+    <p class="buttons">
+        <a href="@routes.Application.index">Back to the form</a>
+    </p>
+    
+}

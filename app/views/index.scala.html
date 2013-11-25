@@ -1,0 +1,42 @@
+@(kataForm: Form[Application.Kelas])
+
+@import helper._
+
+@main("ngetest ah") {
+
+    <h1>Configure your 'Word':</h1>
+
+    
+    @form(action = routes.Application.olahKata, args = 'id -> "kataForm") {
+        
+        @inputText(
+            field = kataForm("nickname"), args = '_label -> "What's your nickName?", 'placeholder -> "NickName"
+        )
+        
+		@inputText(
+            field = kataForm("kota"),
+            args = '_label -> "What's your city?", 'placeholder -> "City"
+        )
+		
+        @select(
+            field = kataForm("banyaknya"), 
+            options = options(
+                "1" -> "1",
+                "2" -> "2",
+				"3" -> "3",
+                "4" -> "4",
+				"5" -> "5",
+                "6" -> "6",
+				"7" -> "7",
+                "8" -> "8"
+            ),
+            args = '_label -> "Choose a how much"
+        )
+        
+        <p class="buttons">
+            <input type="submit">
+        <p>
+        
+    }
+
+}

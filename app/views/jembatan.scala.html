@@ -1,0 +1,31 @@
+@(jembatanForm: Form[Application.Nama])
+
+@import helper._
+
+@main("judul na") {
+
+    <h1>Configure your 'Word':</h1>
+
+    
+    @form(action = routes.Application.olahJembatan, args = 'id -> "jembatanForm") {
+        
+        @inputText(
+            field = jembatanForm("nama"), args = '_label -> "What's that name?", 'placeholder -> "NickName"
+        )
+		@inputText(
+            field = jembatanForm("lokasi"), args = '_label -> "Where's that ?", 'placeholder -> "NickName"
+        )
+        
+		@inputText(
+            field = jembatanForm("kota"),
+            args = '_label -> "Where's that city?", 'placeholder -> "City"
+        )
+		
+        
+        <p class="buttons">
+            <input type="submit">
+        <p>
+        
+    }
+
+}

@@ -1,0 +1,12 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index()
+GET		/jembatan					controllers.Application.jembatan()
+GET     /kata                           controllers.Application.olahKata()
+GET     /jembatan2                           controllers.Application.olahJembatan()
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
